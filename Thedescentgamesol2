@@ -1,0 +1,32 @@
+/**
+ * Auto-generated code below aims at helping you parse
+ * the standard input according to the problem statement.
+ **/
+
+
+// game loop
+while (true) 
+{
+    var highestMountain ={};
+    for (var i = 0; i < 8; i++) 
+    {
+        var mountainH = parseInt(readline()); // represents the height of one mountain, from 9 to 0.
+        if(typeof highestMountain.height === 'undefined')
+        {
+            
+            highestMountain.index = i;
+            highestMountain.height = mountainH;
+        }
+            
+        else if( mountainH > highestMountain.height )
+        {
+            highestMountain.index = i;
+            highestMountain.height = mountainH;
+        }
+    }
+    
+
+    // Write an action using print()
+    // To debug: printErr('Debug messages...');
+    print(highestMountain.index); // The number of the mountain to fire on.
+}
